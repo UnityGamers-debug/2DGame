@@ -11,7 +11,7 @@ public class PlayerCharacter : MonoBehaviour
 
     private void Start()
     { //подключаемся к компонентам Animator и Rigidbody2D в объекте Player
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>(); 
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -34,8 +34,7 @@ public class PlayerCharacter : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         { //анимация удара при нажатии на кнопку F
             animator.SetBool("Strike", true);
-        }
-        else if (Input.GetKeyUp(KeyCode.F))
+        } else if (Input.GetKeyUp(KeyCode.F))
         {
             animator.SetBool("Strike", false);
         }
